@@ -1,0 +1,6 @@
+name: FlagGames
+version: 1.0.0
+authors: [kojima1021, mozipi, mrT_japan]
+website: http://wiki.mcmmorpg-server.net
+main: mcmmorpgroup.flaggames.FlagGame
+database: false
