@@ -12,7 +12,6 @@ public class message implements Listener {
 	public void onPlayerJoin(PlayerJoinEvent event) {
 
 	    // サーバー参加メッセージを設定する。
-	    // ただし、初参加プレイヤーなら、初参加メッセージを設定する。
 	    String message;
 	    if ( event.getPlayer().hasPlayedBefore() ) {
 	        message = ChatColor.AQUA + "[FlagGames]"
