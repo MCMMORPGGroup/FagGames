@@ -1,8 +1,6 @@
 package mcmmorpggroup.flaggames;
 
 import org.bukkit.GameMode;
-import org.bukkit.OfflinePlayer;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -13,8 +11,6 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class FlagGame extends JavaPlugin implements Listener{
 	private static FlagGame instance;
-	private OfflinePlayer event;
-
 	/**
 	    @return instance
 	*/
@@ -38,11 +34,6 @@ public class FlagGame extends JavaPlugin implements Listener{
 	//プレーヤーJoin時(PlayerJoinEvent)
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent e) {
-        event = null;
-        Player player = event.getPlayer();
-
-        if (!player.hasPermission("FlagGame.admin.mode")) {
         	e.getPlayer().setGameMode(GameMode.ADVENTURE);
         }
 	}
-}
