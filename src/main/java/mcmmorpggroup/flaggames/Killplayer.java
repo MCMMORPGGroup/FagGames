@@ -8,21 +8,20 @@ import org.bukkit.event.Listener;
 
 public class Killplayer implements CommandExecutor, Listener
 {
-public boolean onCommand1(CommandSender sender, Command cmd, String label, String[] args){
-    if(cmd.getName().equalsIgnoreCase("KillPlayer")){
-        Player target = sender.getServer().getPlayer(args[0]);
-         // 対象プレイヤーがオンラインかどうかを確認します。
-        if (target == null) {
-            sender.sendMessage(args[0] + " というプレイヤーは見つかりません！");
-            return true;
-        }
-        target.setHealth(0); 
-    }
-    return false;
-}
+	  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
+		    if(cmd.getName().equalsIgnoreCase("KillPlayer")){
+		     if (args.length > 0) {
+		        Player target = sender.getServer().getPlayer(args[0]);
+		         // 対象プレイヤーがオンラインかどうかを確認します。
+		        if (target == null) {
+		            sender.sendMessage(args[0] + " というプレイヤーは見つかりません！");
+		            return true;
+		        }
+		        target.setHealth(0);
+		    }
+		    return true;
+		}
+			return true;
+	}
+	}
 
-public boolean onCommand(CommandSender sender, Command command, String label,
-		String[] args) {
-	return false;
-}
-}
