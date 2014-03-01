@@ -4,3 +4,9 @@ authors: [kojima1021, mozipi, mrT_japan]
 website: http://wiki.mcmmorpg-server.net
 main: mcmmorpggroup.flaggames.FlagGame
 database: false
+commands:
+   Killplayer:
+      description: KillPlayerCommand
+      usage: /Killplayer <player>
+      permision: FlagGame.admin.kill
+      permision-message: You don't have FlagGame.admin.kill
