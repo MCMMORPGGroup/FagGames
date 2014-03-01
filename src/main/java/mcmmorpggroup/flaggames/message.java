@@ -15,11 +15,11 @@ public class message implements Listener {
 	    String message;
 	    if ( event.getPlayer().hasPlayedBefore() ) {
 	        message = ChatColor.AQUA + "[FlagGames]"
-	                + ChatColor.GOLD + "event.getPlayer().getName()"
+	                + ChatColor.GOLD + event.getPlayer().getName()
 	                + ChatColor.AQUA + "さんがサーバーに参加しました。";
 	    } else {
 	        message = ChatColor.AQUA + "[FlagGames]"
-	                + ChatColor.GOLD + "event.getPlayer().getName()"
+	                + ChatColor.GOLD + event.getPlayer().getName()
 	                + ChatColor.AQUA + "さんがサーバーに参加しました。";
 	    }
 	    event.setJoinMessage(message);
@@ -30,7 +30,7 @@ public class message implements Listener {
 
 	    // サーバー退出メッセージを設定する。
 	    String message = ChatColor.AQUA + "[FlagGames]"
-                + ChatColor.GOLD + "event.getPlayer().getName()"
+                + ChatColor.GOLD + event.getPlayer().getName()
 	            + ChatColor.AQUA + "さんがサーバーから退出しました。";
 	    event.setQuitMessage(message);
 	}
