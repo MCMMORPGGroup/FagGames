@@ -11,7 +11,7 @@ import org.bukkit.block.Block;
  * @author misterT2525
  */
 public class FlagManager {
-    
+    //フラグブロックリスト
     private final List<Block> flags;
     
     public FlagManager(){
@@ -89,5 +89,13 @@ public class FlagManager {
             return;
         }
         flag.setType(Material.BEACON);
+    }
+    /**
+     * ブロックがフラグかどうかを判断します
+     * @param block 確認したいブロック
+     * @return 結果
+     */
+    public boolean isFlag(Block block){
+        return flags.contains(block);
     }
 }
