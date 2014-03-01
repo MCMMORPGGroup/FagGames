@@ -7,7 +7,7 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 
 /**
- * フラグ関連を処理します
+ * フラグ関連を処理をするクラス
  * @author misterT2525
  */
 public class FlagManager {

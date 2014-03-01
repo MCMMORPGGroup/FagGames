@@ -6,6 +6,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
+/**
+ * 各メッセージを変更するクラス
+ * @author kojima1021 and misterT2525
+ */
 public class message implements Listener {
     
     @EventHandler

@@ -6,9 +6,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-
 /**
- * @author kojima1021, misterT and mozipi
+ * FlagGameメインクラス
+ * @author kojima1021, misterT2525 and mozipi
  */
 public class FlagGame extends JavaPlugin implements Listener{
     //インスタンス
@@ -31,6 +31,7 @@ public class FlagGame extends JavaPlugin implements Listener{
         //コマンド登録
         getCommand("Killplayer").setExecutor(new Killplayer());
         getCommand("tpall").setExecutor(new TPALL());
+        //初期設定完了
         getLogger().info("[Enable]FlagGames");
     }
     //Pluginun終了時
