@@ -10,3 +10,8 @@ commands:
       usage: /Killplayer <player>
       permision: FlagGame.admin.kill
       permision-message: You don't have FlagGame.admin.kill
+   tpall:
+      description: tpall
+      usage: /tpall
+      permision: FlagGame.admin.tpall
+      permision-message: You don't have FlagGame.admin.tpall
