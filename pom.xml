@@ -7,7 +7,7 @@
   <version>0.0.1-Dev</version>
   <packaging>jar</packaging>
 
-  <name>vanish</name>
+  <name>flaggames</name>
   <url>http://maven.apache.org</url>
 
   <properties>

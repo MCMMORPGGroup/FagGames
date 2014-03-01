@@ -24,6 +24,10 @@ public class FlagGame extends JavaPlugin implements Listener{
 	    getServer().getPluginManager().registerEvents(this, this);
 	    instance = this;
 	    getLogger().info("[Enable]FlagGames");
+		getCommand("Killplayer").setExecutor(new Killplayer());
+		getServer().getPluginManager().registerEvents(this, this);
+		getServer().getPluginManager().registerEvents(new Killplayer(), this);
+		getServer().getPluginManager().registerEvents(new message(), this);
 	}
 
 	//Pluginun終了時
