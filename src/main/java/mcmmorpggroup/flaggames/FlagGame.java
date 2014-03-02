@@ -32,12 +32,12 @@ public class FlagGame extends JavaPlugin implements Listener{
         getCommand("Killplayer").setExecutor(new Killplayer());
         getCommand("tpall").setExecutor(new TPALL());
         //初期設定完了
-        getLogger().info("[Enable]FlagGames");
+        getLogger().info("[Enable]プラグインを正常に起動しました。");
     }
     //Pluginun終了時
     @Override
     public void onDisable() {
-        getLogger().info("[Disable]FlagGames");
+        getLogger().info("[Disable]プラグインを正常に終了しました。");
     }
     //プレーヤーJoin時(PlayerJoinEvent)
     @EventHandler
