@@ -14,7 +14,7 @@ public class Killplayer implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
         if(cmd.getName().equalsIgnoreCase("KillPlayer")){
             if(!sender.hasPermission("FlagGame.admin.kill")){
-                sender.sendMessage(ChatColor.RED + "あなたは、このコマンドを実行する権限を所有していません。");
+                sender.sendMessage(ChatColor.RED + "あなたは、このコマンドを実行する権限を所有していません。(FlagGame.admin.kill)");
                 return true;
             }
             if (args.length > 0) {
