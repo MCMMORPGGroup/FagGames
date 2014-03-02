@@ -15,3 +15,8 @@ commands:
       usage: /tpall
       permision: FlagGame.admin.tpall
       permision-message: You don't have FlagGame.admin.tpall
+   heal:
+      description: コマンドでプレーヤーを全回復するコマンドです。
+      usage: /heal <player>
+      permision: FlagGame.admin.heal
+      permision-message: You don't have FlagGame.admin.heal
