@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
  * @author kojima1021 and misterT2525
  */
 public class TPALL implements CommandExecutor {
-    
+
     public boolean onCommand(CommandSender sender, Command cmd, String lavel, String[] args){
         if(cmd.getName().equalsIgnoreCase("tpall")) {
             if(!(sender instanceof Player)){
@@ -22,7 +22,7 @@ public class TPALL implements CommandExecutor {
             }
             if(!(sender.hasPermission("FlagGame.admin.tpall"))){
                 //権限非所有者を排除
-                sender.sendMessage(ChatColor.RED + "あなたは、このコマンドを実行する権限を所有していません。");
+                sender.sendMessage(ChatColor.RED + "あなたは、このコマンドを実行する権限を所有していません。(FlagGame.admin.tpall)");
                 return true;
             }
             Player SenderPlayer = (Player)sender;
