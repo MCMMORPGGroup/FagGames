@@ -17,19 +17,22 @@ public class TPALL implements CommandExecutor {
         if(cmd.getName().equalsIgnoreCase("tpall")) {
             if(!(sender instanceof Player)){
                 //プレイヤー以外の排除
-                sender.sendMessage(ChatColor.RED + "このコマンドはプレイヤーのみ実行出来ます。");
+                sender.sendMessage(ChatColor.AQUA + "[FlagGames]"
+                		          +ChatColor.RED + "このコマンドはプレイヤーのみ実行出来ます。");
                 return true;
             }
             if(!(sender.hasPermission("FlagGame.admin.tpall"))){
                 //権限非所有者を排除
-                sender.sendMessage(ChatColor.RED + "あなたは、このコマンドを実行する権限を所有していません。(FlagGame.admin.tpall)");
+                sender.sendMessage(ChatColor.AQUA+ "[FlagGames]"
+                		          +ChatColor.RED + "あなたは、このコマンドを実行する権限を所有していません。(FlagGame.admin.tpall)");
                 return true;
             }
             Player SenderPlayer = (Player)sender;
             for(Player p : Bukkit.getServer().getOnlinePlayers()) {
                 p.teleport(SenderPlayer.getLocation());
             }
-            sender.sendMessage(ChatColor.AQUA + "全プレイヤーをtpしました。");
+            sender.sendMessage(ChatColor.AQUA + "[FlagGames]"
+                               +ChatColor.RESET + "全プレーヤーをTPしました。");
             return true;
         }
         return false;
