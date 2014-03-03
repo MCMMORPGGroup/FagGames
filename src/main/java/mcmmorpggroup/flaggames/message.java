@@ -4,6 +4,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerKickEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 /**
@@ -11,23 +12,23 @@ import org.bukkit.event.player.PlayerQuitEvent;
  * @author kojima1021 and misterT2525
  */
 public class message implements Listener {
-    
+
     @EventHandler
-    public void onPlayerJoin(PlayerJoinEvent event) {
+    public void onPlayrrJoin(PlayerJoinEvent event2) {
         // サーバー参加メッセージを設定する。
         String message;
-        if ( event.getPlayer().hasPlayedBefore() ) {
+        if ( event2.getPlayer().hasPlayedBefore() ) {
             message = ChatColor.AQUA + "[FlagGames]"
-                + ChatColor.GOLD + event.getPlayer().getName()
+                + ChatColor.GOLD + event2.getPlayer().getName()
                 + ChatColor.AQUA + "さんがサーバーに参加しました。";
         } else {
             message = ChatColor.AQUA + "[FlagGames]"
-                + ChatColor.GOLD + event.getPlayer().getName()
+                + ChatColor.GOLD + event2.getPlayer().getName()
                 + ChatColor.AQUA + "さんがサーバーに参加しました。";
         }
-        event.setJoinMessage(message);
+        event2.setJoinMessage(message);
     }
-    
+
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent event) {
         // サーバー退出メッセージを設定する。
@@ -35,5 +36,14 @@ public class message implements Listener {
             + ChatColor.GOLD + event.getPlayer().getName()
             + ChatColor.AQUA + "さんがサーバーから退出しました。";
         event.setQuitMessage(message);
+    }
+    @EventHandler
+    public void onPlayerKick(PlayerKickEvent event1) {
+        // Kick時の表示メッセージを設定する
+        String message = ChatColor.AQUA + "[FlagGames]"
+            + ChatColor.GOLD + event1.getPlayer().getName()
+            + ChatColor.AQUA + "さんが"
+            + ChatColor.AQUA + "Kickされました。" + "(" + event1.getReason() +")";
+        event1.setLeaveMessage(message);
     }
 }
