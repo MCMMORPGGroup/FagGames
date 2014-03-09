@@ -18,7 +18,11 @@ public class HEAL implements CommandExecutor {
                 + ChatColor.RED + "あなたは、このコマンドを実行する権限を所有していません。(FlagGame.admin.heal)");
                 return true;
             }
-            if (args.length > 0) {
+            if (args.length < 1){//引数なしの場合
+            sender.sendMessage(ChatColor.AQUA + "[FlagGames]"
+            	+ ChatColor.RED + "プレーヤー名を指定してください。 /heal <player>" );
+            return true;
+            } else if (args.length > 0) {
                 Player target = sender.getServer().getPlayer(args[0]);
                 // 対象プレイヤーがオンラインかどうかを確認します。
                 if (target == null) {
@@ -27,9 +31,10 @@ public class HEAL implements CommandExecutor {
                     return true;
                 }
                 target.setHealth(20);
+                target.setFoodLevel(20);
                 sender.sendMessage(ChatColor.AQUA + "[FlagGames]" + ChatColor.RESET
                 + args[0] + " のプレーヤーのHPを全回復させました。");
-            }
+    }
             return true;
         }
         return false;

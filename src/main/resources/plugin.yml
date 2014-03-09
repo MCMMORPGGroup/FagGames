@@ -20,3 +20,8 @@ commands:
       usage: /heal <player>
       permision: FlagGame.admin.heal
       permision-message: You don't have FlagGame.admin.heal
+   flaggames:
+      description: FlagGamesのコマンドです。
+      usage: /flaggames help
+      permision: FlagGame.admin.heal
+      permision-message: You don't have FlagGame.admin.heal
