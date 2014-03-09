@@ -23,8 +23,8 @@ public class Heal extends FlagGamesCommand {
 		Player player = null;
 
 		//Get player.
-		if (hasOption(args, 2)) {
-			if ((player = Bukkit.getPlayer(args.get(2))) != null) {} else {
+		if (hasOption(args, 1)) {
+			if ((player = Bukkit.getPlayer(args.get(1))) != null) {} else {
 				sender.sendMessage(plugin.getLang().get("Err_PlayerNotFound"));
 				return true;
 			}

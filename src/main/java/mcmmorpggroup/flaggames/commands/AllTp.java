@@ -23,8 +23,8 @@ public class AllTp extends FlagGamesCommand {
 		Player toPlayer = null;
 
 		//Get player.
-		if (hasOption(args, 2)) {
-			if ((toPlayer = Bukkit.getPlayer(args.get(2))) != null) {} else {
+		if (hasOption(args, 1)) {
+			if ((toPlayer = Bukkit.getPlayer(args.get(1))) != null) {} else {
 				sender.sendMessage(plugin.getLang().get("Err_PlayerNotFound"));
 				return true;
 			}
