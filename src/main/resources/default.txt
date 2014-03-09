@@ -1,0 +1,12 @@
+#Command Usage
+Cmd_Usage_Help=§6/fg - FlagGameのコマンド一覧を表示します
+Cmd_Usage_Slay=§6/fg slay <Player> - プレイヤーを殺します
+
+#Command output
+Cmd_Out_Slay_Slay=§a<%Player%>を殺しました!
+Cmd_Out_AllTp_Teleport=§aすべてのプレイヤーを<%Player%>にテレポートしました!
+Cmd_Out_Heal_Heal=§a<%Player%>のステータスを全回復しました!
+
+#Common error message of commands.
+Err_PlayerNotFound=§4指定されたプレイヤーは存在しません!
+Err_NotNumber=§4数値であるべき指定が数値ではありません!

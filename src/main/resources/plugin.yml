@@ -1,27 +1,14 @@
 name: FlagGames
 version: 1.0.0
-authors: [kojima1021, mozipi, mrT_japan]
+authors: [kojima1021, mozipi, mrT_japan, Creepapa]
 website: http://wiki.mcmmorpg-server.net
 main: mcmmorpggroup.flaggames.FlagGame
-database: false
 commands:
-   Killplayer:
-      description: コマンドでプレーヤーを殺すコマンドです。
-      usage: /Killplayer <player>
-      permision: FlagGame.admin.kill
-      permision-message: You don't have FlagGame.admin.kill
-   tpall:
-      description: コマンドで全プレーヤーを自分の場所に呼ぶコマンドです。
-      usage: /tpall
-      permision: FlagGame.admin.tpall
-      permision-message: You don't have FlagGame.admin.tpall
-   heal:
-      description: コマンドでプレーヤーを全回復するコマンドです。
-      usage: /heal <player>
-      permision: FlagGame.admin.heal
-      permision-message: You don't have FlagGame.admin.heal
    flaggames:
       description: FlagGamesのコマンドです。
-      usage: /flaggames help
-      permision: FlagGame.admin.heal
-      permision-message: You don't have FlagGame.admin.heal
+      usage: /flaggames
+      permision-message: You don't have permission!
+   fg:
+      description: FlagGamesのコマンドです。
+      usage: /fg
+      permision-message: You don't have permission!
