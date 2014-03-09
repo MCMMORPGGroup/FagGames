@@ -20,7 +20,7 @@ public class Slay extends FlagGamesCommand {
 
 	@Override
 	public boolean execute(CommandSender sender, ArrayList<String> args) {
-		Player player = plugin.getServer().getPlayer(args.get(1));
+		Player player;
 
 		//Get player.
 		if (hasOption(args, 2)) {

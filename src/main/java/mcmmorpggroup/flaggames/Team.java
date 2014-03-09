@@ -1,5 +1,7 @@
 package mcmmorpggroup.flaggames;
 
+import java.util.HashSet;
+
 import org.bukkit.Color;
 
 public class Team {
@@ -14,17 +16,47 @@ public class Team {
 	 */
 	protected String name;
 
+	/**
+	 * このチームのフラグのリスト
+	 */
+	protected HashSet<Flag> flags;
+
 	public Team(Color color, String name) {
 		this.teamColor = color;
 		this.name = name;
 	}
 
+	/**
+	 * チームの色を取得します。
+	 * @return チームの色
+	 */
 	public Color getTeamColor() {
 		return teamColor;
 	}
 
+	/**
+	 * チーム名を返します。
+	 * @return チーム名
+	 */
 	public String getName() {
 		return name;
+	}
+
+	/**
+	 * フラグを追加します。
+	 * @return 既にフラグか追加されている場合はfalse
+	 */
+	public boolean addFlag(Flag flag) {
+		return flags.add(flag);
+	}
+
+	/**
+	 * フラグを削除します。
+	 * @param flag 削除するフラグ
+	 * @return フラグが削除できた場合はtrue
+	 */
+	public boolean removeFlag(Flag flag) {
+		return flags.remove(flag);
 	}
 
 	@Override

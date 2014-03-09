@@ -64,6 +64,9 @@ public final class FlagGame extends JavaPlugin implements Listener {
     	//CommandExecutorのインスタンス生成 > 代入
     	cmdExecutor = new CommandExecutor();
 
+    	//TeamManagerのインスタンス作成
+    	teamManager = new TeamManager();
+
     	//コマンド登録
     	registerCommands();
 
