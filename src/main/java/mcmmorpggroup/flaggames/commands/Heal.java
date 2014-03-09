@@ -47,7 +47,7 @@ public class Heal extends FlagGamesCommand {
 
 	@Override
 	public String getUsage(CommandSender sender) {
-		return plugin.getLang().get("Cmd_Out_Heal");
+		return plugin.getLang().get("Cmd_Usage_Heal");
 	}
 
 }

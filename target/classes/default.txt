@@ -1,6 +1,8 @@
 #Command Usage
 Cmd_Usage_Help=§6/fg - FlagGameのコマンド一覧を表示します
-Cmd_Usage_Slay=§6/fg slay <Player> - プレイヤーを殺します
+Cmd_Usage_Slay=§6/fg slay [Player] - プレイヤーを殺します
+Cmd_Usage_Heal=§6/fg heal [Player] - プレイヤーを回復します
+Cmd_Usage_AllTp=§6/fg alltp [Player] - すべてのプレイヤーをテレポートします
 
 #Command output
 Cmd_Out_Slay_Slay=§a<%Player%>を殺しました!

@@ -8,10 +8,13 @@ import java.net.URISyntaxException;
 
 import mcmmorpggroup.flaggames.commands.AllTp;
 import mcmmorpggroup.flaggames.commands.Heal;
+import mcmmorpggroup.flaggames.commands.Help;
 import mcmmorpggroup.flaggames.commands.Slay;
 import net.akaishi_teacher.util.command.CommandExecutor;
 import net.akaishi_teacher.util.lang.Language;
 
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -35,6 +38,12 @@ public final class FlagGame extends JavaPlugin implements Listener {
 	 * コマンド実行をするクラスのインスタンス
 	 */
 	private CommandExecutor cmdExecutor;
+
+	@Override
+	public boolean onCommand(CommandSender sender, Command command,
+			String label, String[] args) {
+		return cmdExecutor.onCommand(sender, args);
+	}
 
     @Override
     public void onEnable() {
@@ -74,6 +83,8 @@ public final class FlagGame extends JavaPlugin implements Listener {
      * PreInit処理
      */
     public void preInit() {
+    	getConfig().addDefault("lang", "ja_JP");
+
     	langName = getConfig().getString("lang");
     }
 
@@ -94,7 +105,8 @@ public final class FlagGame extends JavaPlugin implements Listener {
      * コマンドを登録します
      */
     public void registerCommands() {
-    	cmdExecutor.addCommand(new Slay(this, "slay any", "flaggame.slay", "指定したプレイヤーを殺します"));
+    	cmdExecutor.addCommand(new Help(this, "", null, "コマンド一覧を表示します"));
+    	cmdExecutor.addCommand(new Slay(this, "slay", "flaggame.slay", "指定したプレイヤーを殺します"));
     	cmdExecutor.addCommand(new AllTp(this, "alltp", "flaggame.alltp", "すべてのプレイヤーを指定したプレイヤーにテレポートします"));
     	cmdExecutor.addCommand(new Heal(this, "heal", "flaggame.heal", "指定したプレイヤーを回復します"));
     }
@@ -135,10 +147,22 @@ public final class FlagGame extends JavaPlugin implements Listener {
 
     /**
      * Language機能のインスタンスを返します。
-     * @return
+     * @return Languageのインスタンス
      */
     public Language getLang() {
     	return lang;
     }
+
+
+
+    /**
+     * コマンド実行機能のクラスのインスタンスを返します。
+     * @return CommandExecutorのインスタンス
+     */
+	public CommandExecutor getCmdExecutor() {
+		return cmdExecutor;
+	}
+
+
 
 }

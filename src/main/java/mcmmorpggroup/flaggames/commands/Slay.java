@@ -7,6 +7,7 @@ import java.util.Map;
 import mcmmorpggroup.flaggames.FlagGame;
 import net.akaishi_teacher.util.lang.Language;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -20,6 +21,20 @@ public class Slay extends FlagGamesCommand {
 	@Override
 	public boolean execute(CommandSender sender, ArrayList<String> args) {
 		Player player = plugin.getServer().getPlayer(args.get(1));
+
+		//Get player.
+		if (hasOption(args, 2)) {
+			if ((player = Bukkit.getPlayer(args.get(2))) != null) {} else {
+				sender.sendMessage(plugin.getLang().get("Err_PlayerNotFound"));
+				return true;
+			}
+		} else {
+			if ((player = castPlayer(sender)) != null);
+			else //By console or cmdBlock.
+				return true;
+		}
+
+		//Slay.
 		player.setHealth(0);
 
 		Map<String, String> replaceMap = new HashMap<>();

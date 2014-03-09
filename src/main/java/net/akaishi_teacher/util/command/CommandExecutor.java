@@ -31,13 +31,10 @@ public class CommandExecutor {
 	 */
 	public boolean onCommand(CommandSender sender, String[] args) {
 		//Sort of commands.
-		LinkedList<AbstractCommand> l = new LinkedList<AbstractCommand>(commandSet);
+		ArrayList<AbstractCommand> l = new ArrayList<AbstractCommand>(commandSet);
 		Collections.sort(l, new ComparatorCommandArgs());
 
-		//Assignment in sorted commands.
-		commandSet = new LinkedHashSet<AbstractCommand>(l);
-
-		for (AbstractCommand command : commandSet) {
+		for (AbstractCommand command : l) {
 			//Match pattern?
 			if (command.getPattern().match(args)) {
 				//Sender has permission of the command?
