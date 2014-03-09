@@ -11,12 +11,12 @@ import org.bukkit.block.Block;
  * @author misterT2525
  */
 public class FlagManager {
-    //フラグブロックリスト
-    private final List<Block> flags;
-    
-    public FlagManager(){
-        flags = new ArrayList<Block>();
-    }
+
+	/**
+	 * Flagのリスト
+	 */
+    private final ArrayList<Flag> flags = new ArrayList<Flag>();
+
     /**
      * フラグを登録します
      * @param flag 登録するフラグ
@@ -61,7 +61,7 @@ public class FlagManager {
     /**
      * 赤羊毛からビーコンに変更します<br>
      * フラグとして登録されて無い場合は実行されません
-     * @param flag 
+     * @param flag
      */
     public void RedToBeacon(Block flag){
         //フラグ登録されてない場合は処理しない
@@ -77,7 +77,7 @@ public class FlagManager {
     /**
      * 青羊毛からビーコンに変更します<br>
      * フラグとして登録されて無い場合は実行されません
-     * @param flag 
+     * @param flag
      */
     public void BlueToBeacon(Block flag){
         //フラグ登録されてない場合は処理しない

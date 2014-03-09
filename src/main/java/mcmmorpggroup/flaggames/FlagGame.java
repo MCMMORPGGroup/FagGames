@@ -39,13 +39,21 @@ public final class FlagGame extends JavaPlugin implements Listener {
 	 */
 	private CommandExecutor cmdExecutor;
 
+	/**
+	 * TeamManagerのインスタンス
+	 */
+	private TeamManager teamManager;
+
+
+
 	@Override
 	public boolean onCommand(CommandSender sender, Command command,
 			String label, String[] args) {
 		return cmdExecutor.onCommand(sender, args);
 	}
 
-    @Override
+
+	@Override
     public void onEnable() {
     	//Pre init処理
     	preInit();
