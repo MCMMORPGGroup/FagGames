@@ -20,12 +20,6 @@ public final class FlagGame extends JavaPlugin {
 	 */
 	private LanguageManager langManager;
 
-	public FlagGame() {
-		this.langManager =
-				new LanguageManager(loadDefaultLocalizationFile());
-		loadLangFiles();
-	}
-
 	@Override
 	public boolean onCommand(CommandSender sender, Command command,
 			String label, String[] args) {
@@ -39,7 +33,9 @@ public final class FlagGame extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
-		super.onEnable();
+		this.langManager =
+				new LanguageManager(loadDefaultLocalizationFile());
+		loadLangFiles();
 	}
 
 	//Load default lang file.
