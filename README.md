@@ -1,3 +1,7 @@
-flagGames
-=========
-MCMMORPGのEventPlugin
+=============================================
+
+
+			FlagGameEventPlugin
+
+						 by XxxxCreeperZxxxX
+=============================================
