@@ -1,0 +1,28 @@
+# MCMMOServer FlagGamePlugin
+# lang_US <<=== 英語ファイル
+
+JoinMessage: '$Prefix&6$Player &bjoined the Game.'
+FirstJoinMessage '$Prefix&6$Player &bjoined the Game for the first Time.'
+QuitMessage: '$Prefix&6$Player &bleft the Game.
+KickMessage: '$Prefix&6$Player &bkicked. (Reason: $Reason)'
+PlayerNotFoundMessage: 'Specified Player Not Found!'
+CommandError: '$PrefixCommand Arguments Error!'
+
+Flag_Cmd_Help:
+  - '&b%&6***********************&b%'
+  - '       &7FlagGame Helper'
+  - '&b%&6***********************&b%'
+  - ''
+  - '&7/flag   - FlagGame Progress Command'
+  - '&7/slay   - Specified Player Kill Command'
+  - '&7/alltp  - All Players teleport to Specified Player Command'
+  - '&7/heal   - Specified Player Heal Command'
+
+Slay_Cmd_Success: '$Prefix&6$Player&b killed.'
+Slay_Cmd_Help: '$Prefix&7/slay [Player] - Specified Player Kill'
+
+Heal_Cmd_Success: '$Prefix&6$Player&b healed.'
+Heal_Cmd_Help: '$Prefix&7/heal [Player] - Specified Player Heal'
+
+Alltp_Cmd_Success: '$Prefix&6$Player&b Location to Teleport AllPlayers.'
+Alltp_Cmd_Help: '$Prefix&7/alltp [Player] - Specified Player Location to Teleport AllPlayer'

@@ -1,0 +1,28 @@
+# MCMMOServer FlagGamePlugin
+# lang_JP <<=== 日本語ファイル
+
+JoinMessage: '$Prefix&6$Player&bさんがサーバーに参加しました。'
+FirstJoinMessage: '$Prefix&6$Player&bさんがサーバーに初参加しました。'
+QuitMessage: '$Prefix&6$Player&bさんがサーバーから退出しました。'
+KickMessage: '$Prefix&6$Player&bさんがKickされました。(理由: $Reason)'
+PlayerNotFoundMessage: '指定されたプレイヤーが見つかりません!'
+CommandError: '$Prefixコマンドの引数が間違っています'
+
+Flag_Cmd_Help:
+  - '&b%&6***********************&b%'
+  - '       &7FlagGame Helper'
+  - '&b%&6***********************&b%'
+  - ''
+  - '&7/flag   - FlagGameの進行用コマンド'
+  - '&7/slay   - 指定したプレイヤーを殺すコマンド'
+  - '&7/alltp  - すべてのプレイヤーを指定したプレイヤーにテレポートするコマンド'
+  - '&7/heal   - 指定したプレイヤーを回復するコマンド'
+
+Slay_Cmd_Success: '$Prefix&6$Player&bさんを殺害しました!'
+Slay_Cmd_Help: '$Prefix&7/slay [Player] - 指定したプレイヤーを殺します'
+
+Heal_Cmd_Success: '$Prefix&6$Player&bさんを回復させました!'
+Heal_Cmd_Help: '$Prefix&7/heal [Player] - 指定したプレイヤーを回復させます'
+
+Alltp_Cmd_Success: '$Prefix&6$Player&bさんの所へ全員テレポートさせました!'
+Alltp_Cmd_Help: '$Prefix&7/alltp [Player] - 指定したプレイヤーの所へ全員テレポートさせます'

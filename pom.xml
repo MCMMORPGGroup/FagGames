@@ -4,7 +4,7 @@
 
   <groupId>mcmmorpggroup</groupId>
   <artifactId>flaggames</artifactId>
-  <version>0.0.1-Dev</version>
+  <version>0.0.1</version>
   <packaging>jar</packaging>
 
   <name>flaggames</name>

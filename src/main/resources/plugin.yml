@@ -1,14 +1,26 @@
 name: FlagGames
-version: 1.0.0
+version: 0.0.1
 authors: [kojima1021, mozipi, mrT_japan, Creepapa]
 website: http://wiki.mcmmorpg-server.net
-main: mcmmorpggroup.flaggames.FlagGame
+main: net.mcmmorpg_server.flaggames.FlagGames
 commands:
-   flaggames:
-      description: FlagGamesのコマンドです。
-      usage: /flaggames
-      permision-message: You don't have permission!
-   fg:
-      description: FlagGamesのコマンドです。
-      usage: /fg
-      permision-message: You don't have permission!
+  flaggames:
+    description: Game Command
+    usage: /<command>
+    permission: flaggame.game
+    permission-message: You don't have <permission>
+  slay:
+    description: Specified Player Kill Command
+    usage: /<command>
+    permission: flaggame.slay
+    permission-message: You don't have <permission>
+  alltp:
+    description: Specified Player Location to Teleport AllPlayers Command
+    usage: /<command>
+    permission: flaggame.alltp
+    permission-message: You don't have <permission>
+  heal:
+    description: Specified Player Heal Command
+    usage: /<command>
+    permission: flaggame.heal
+    permission-message: You don't have <permission>
